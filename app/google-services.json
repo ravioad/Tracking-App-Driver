@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "762919502438",
+    "firebase_url": "https://moonplex-cc85e.firebaseio.com",
+    "project_id": "moonplex-cc85e",
+    "storage_bucket": "moonplex-cc85e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762919502438:android:bb78efa8bbef52c65963a7",
+        "android_client_info": {
+          "package_name": "com.example.administrator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762919502438-5j5a0hcqcvrtsnjm9k4au8g2rs7gosnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1GYm5j5UPqro9M1kerEmcSdGxisKk2a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762919502438-5j5a0hcqcvrtsnjm9k4au8g2rs7gosnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762919502438:android:4cd9e9cb7d071ef25963a7",
+        "android_client_info": {
+          "package_name": "com.example.moonplex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762919502438-5j5a0hcqcvrtsnjm9k4au8g2rs7gosnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1GYm5j5UPqro9M1kerEmcSdGxisKk2a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762919502438-5j5a0hcqcvrtsnjm9k4au8g2rs7gosnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762919502438:android:dea148a76a99c00a5963a7",
+        "android_client_info": {
+          "package_name": "com.example.trackinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762919502438-5j5a0hcqcvrtsnjm9k4au8g2rs7gosnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1GYm5j5UPqro9M1kerEmcSdGxisKk2a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762919502438-5j5a0hcqcvrtsnjm9k4au8g2rs7gosnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
