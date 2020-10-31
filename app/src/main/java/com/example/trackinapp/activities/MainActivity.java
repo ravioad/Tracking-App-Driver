@@ -1,10 +1,14 @@
 package com.example.trackinapp.activities;
 
 import android.Manifest;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,6 +19,7 @@ import com.example.trackinapp.R;
 import com.example.trackinapp.UserLocation;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import io.nlopez.smartlocation.OnLocationUpdatedListener;
@@ -22,6 +27,8 @@ import io.nlopez.smartlocation.SmartLocation;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FirebaseAuth firebaseAuth;
 
     int RC_CAMERA_AND_LOCATION = 11;
     Handler handler = new Handler();
@@ -60,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        firebaseAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
     }
 
@@ -68,6 +75,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         SmartLocation.with(this).location().stop();
         super.onStop();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logOut:
+                logout();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void logout() {
+        firebaseAuth.signOut();
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        finish();
     }
 
     public void getLocation(View view) {
