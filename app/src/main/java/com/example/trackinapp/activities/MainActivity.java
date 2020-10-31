@@ -1,4 +1,4 @@
-package com.example.trackinapp;
+package com.example.trackinapp.activities;
 
 import android.Manifest;
 import android.location.Location;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.trackinapp.R;
+import com.example.trackinapp.UserLocation;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;

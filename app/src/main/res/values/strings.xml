@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Trackin App</string>
+    <string name="app_name">Tracking App</string>
     <string name="camera_and_location_rationale">Location Permission</string>
 </resources>
