@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.trackinapp.R;
@@ -28,6 +29,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class DriverActivity extends AppCompatActivity {
 
+    private Button startRide;
     private FirebaseAuth firebaseAuth;
 
     int RC_CAMERA_AND_LOCATION = 11;
@@ -69,6 +71,13 @@ public class DriverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_driver);
         firebaseAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
+        startRide = findViewById(R.id.button);
+        startRide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getLocation();
+            }
+        });
     }
 
     @Override
@@ -102,7 +111,7 @@ public class DriverActivity extends AppCompatActivity {
         finish();
     }
 
-    public void getLocation(View view) {
+    public void getLocation() {
         Toast.makeText(this, "button", Toast.LENGTH_SHORT).show();
         String[] perms = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
         if (EasyPermissions.hasPermissions(this, perms)) {

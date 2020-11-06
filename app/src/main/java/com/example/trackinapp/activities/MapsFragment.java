@@ -22,8 +22,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MapsFragment extends FragmentActivity implements OnMapReadyCallback {
 
-
-
     private GoogleMap mMap;
     private FirebaseDatabase mDatabase;
     private Marker marker;
